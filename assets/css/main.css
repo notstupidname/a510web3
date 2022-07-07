@@ -225,6 +225,10 @@ main {
     width: clamp(200px, 100%, 50em);
 }
 
+    .container.big {
+        width: clamp(200px, 100%, 65em);
+    }
+
 .image {
     display: block;
     width: 100%;
@@ -236,6 +240,8 @@ main {
 .worklist {
     display: flex;
     gap: 1rem 1.5rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
 }
 
     .worklist a {
@@ -245,7 +251,8 @@ main {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 }
 
 .projects-item {
@@ -274,7 +281,7 @@ main {
         margin: 0;
     }
 
-    .container {
+    .container, .container.big {
         padding: 0 2rem;
         width: calc(100% - 4rem);
     }
@@ -294,9 +301,13 @@ main {
         padding: 2rem 1rem;
     }
 
-    .container {
+    .container, .container.big {
         padding: 0 1rem;
         width: calc(100% - 2rem);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 }
 
