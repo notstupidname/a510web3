@@ -123,25 +123,31 @@ p {
 a {
     color: var(--text-color);
     text-decoration: none;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     -webkit-tap-highlight-color: transparent;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     cursor: pointer;
-    text-underline-offset: 0.2em;
+   /*  text-underline-offset: 0.2em;
     text-decoration-thickness: 2px;
     background: linear-gradient(var(--text-color) 0 0) var(--p, 0) / var(--p, 0) no-repeat;
-    transition: .4s, background-position 0s;
+    transition: .4s, background-position 0s; */
+    background-image: linear-gradient(var(--text-color) 0 0);
+    background-size: 200% .15rem;
+    background-position: 200% 100%;
+    background-repeat: no-repeat;
+    transition: background-position .3s;
 }
 
     a:hover {
-        opacity: 0.85;
-        --p: 100%;
+        /* opacity: 0.85;
+        --p: 100%; */
        /*  background-color: var(--text-color); */
-        color: var(--back-color);
+        /* color: var(--back-color); */
+        background-position: 100% 100%;
     }
     
     a:active {
-        opacity: 0.65;
+        opacity: 0.85;
     }
 
 img {
@@ -174,14 +180,15 @@ body {
 
     #header a {
         font-size: 1.5rem;
-        line-height: 1em;
-        text-decoration: none;
+        line-height: 1.4em;
         text-transform: uppercase;
+        font-stretch: condensed;
+        letter-spacing: 0.1em;
     }
 
         #header a.logo:hover {
-            background: var(--back-color);
-            color: var(--text-color);
+            /* background: var(--back-color);
+            color: var(--text-color); */
         }
 
         #header a:not(:first-child) {
@@ -192,12 +199,14 @@ body {
             margin-right: 0;
         }
     
-    #header a.current {
-        background: var(--text-color);
-        color: var(--back-color);
+    .current {
+        /* background: var(--text-color);
+        color: var(--back-color); */
+        background-position: bottom;
     }
 
     #header a.logo {
+        background: none;
         margin-right: auto;
         text-decoration: none;
         height: 3rem;
@@ -250,8 +259,9 @@ main {
 }
 
     .worklist a {
-        text-decoration: none;
         text-transform: uppercase;
+        font-stretch: condensed;
+        letter-spacing: 0.1em;
     }
 
 .projects-grid {
@@ -264,7 +274,13 @@ main {
     display: flex;
     flex-direction: column;
     text-decoration: none;
+    background: none;
+    transition: all .2s ease-in-out;
 }
+
+    .projects-item:hover{
+        opacity: 0.85;
+    }
 
     .projects-item img{
         aspect-ratio: 3/2;
