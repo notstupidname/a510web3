@@ -132,7 +132,7 @@ a {
     background: linear-gradient(var(--text-color) 0 0) var(--p, 0) / var(--p, 0) no-repeat;
     transition: .4s, background-position 0s; */
     background-image: linear-gradient(var(--text-color) 0 0);
-    background-size: 200% .15rem;
+    background-size: 200% .1em;
     background-position: 200% 100%;
     background-repeat: no-repeat;
     transition: background-position .3s;
@@ -162,6 +162,33 @@ body {
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
 }
+
+/* Breadcrumbs */
+
+ul.breadcrumbs {
+    font-weight: 300;
+    line-height: 2em;
+    font-size: 80%;
+    max-width: none;
+    color: var(--mid-color);
+    font-stretch: condensed;
+    text-transform: uppercase;
+}
+
+    ul.breadcrumbs li {
+        display: inline-block;
+        padding: 0;
+        white-space: nowrap;
+    }
+
+        ul.breadcrumbs li::after {
+            content: ">";
+            padding: 0 1em;
+        }
+
+        ul.breadcrumbs li:last-child::after {
+            content: "";
+        }
 
 /* Header */
 
