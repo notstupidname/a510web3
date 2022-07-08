@@ -222,11 +222,11 @@ main {
 }
 
 .container {
-    width: clamp(200px, 100%, 50em);
+    width: clamp(200px, 100%, 50rem);
 }
 
     .container.big {
-        width: clamp(200px, 100%, 65em);
+        width: clamp(200px, 100%, 65rem);
     }
 
 .image {
@@ -241,7 +241,12 @@ main {
     display: flex;
     gap: 1rem 1.5rem;
     flex-wrap: wrap;
-    margin: 2rem 0;
+    padding: 3rem 0 2rem;
+    position: sticky;
+    top: 0;
+    width: clamp(200px,100%,65rem);
+    background: var(--back-color);
+    z-index: 100;
 }
 
     .worklist a {
@@ -252,14 +257,34 @@ main {
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .projects-item {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
 }
 
-@media screen and (max-width: 1420px) {
+    .projects-item img{
+        aspect-ratio: 3/2;
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+
+    .projects-item .caption h3 {
+        margin: 1rem 0 0.25rem 0;
+    }
+
+    .projects-item .caption p {
+        color: var(--mid-color);
+        font-stretch: condensed;
+        letter-spacing: 0.1em;
+    }
+
+@media screen and (max-width: 1915px) {
 
     #header {
         top: auto;
@@ -281,9 +306,13 @@ main {
         margin: 0;
     }
 
-    .container, .container.big {
+    .container, .container.big, .worklist {
         padding: 0 2rem;
         width: calc(100% - 4rem);
+    }
+
+    .worklist {
+        padding: 3rem 0 2rem;
     }
 }
 
@@ -304,6 +333,10 @@ main {
     .container, .container.big {
         padding: 0 1rem;
         width: calc(100% - 2rem);
+    }
+
+    .worklist {
+        position: relative;
     }
 
     .projects-grid {
