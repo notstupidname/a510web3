@@ -311,7 +311,11 @@ main {
     }
 
     .worklist {
-        padding: 3rem 0 2rem;
+        padding: 2rem 0 2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -340,11 +344,10 @@ main {
 
     .worklist {
         position: relative;
+        width: calc(100% - 2rem);
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+
 }
 
 /* Loader */
