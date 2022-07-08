@@ -322,7 +322,11 @@ main {
     }
 
         #header a {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        #header a.logo {
+            height: 2.5rem;
         }
     
     #footer {
