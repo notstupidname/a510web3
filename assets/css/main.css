@@ -12,6 +12,7 @@
     color-scheme: light dark;
     color: var(--text-color);
     fill: var(--text-color);
+    stroke: var(--text-color);
 }
 
 ::selection {
@@ -268,7 +269,7 @@ main {
 .image {
     display: block;
     width: 100%;
-    max-height: 90vh;
+    max-height: 85vh;
     object-fit: contain;
     margin: 2rem 0 3rem;
 }
