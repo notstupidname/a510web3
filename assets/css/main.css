@@ -156,6 +156,43 @@ img {
     block-size: auto;
     }
 
+
+/* Table */
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    margin: 0 0 2em 0;
+    width: 100%;
+}
+
+    table tbody tr {
+        border-bottom: solid 1px rgba(144, 144, 144, 0.25);
+        border-left: 0;
+        border-right: 0;
+    }
+    
+        table tbody tr:last-child {
+            border: 0;
+        }
+
+    table td {
+        line-height: 1.35em;
+        padding: 0.5em 0 0 0;
+        text-align: center;
+    }
+    
+        table td:first-child {
+            text-align: left;
+        }
+        
+        table td:last-child {
+            text-align: right;
+        }
+
+
 /* Layout */
 
 body {
@@ -326,6 +363,73 @@ main {
         font-stretch: condensed;
         letter-spacing: 0.1em;
     }
+
+/* Slider */
+
+.slider {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    display: flex;
+}
+
+    .slider::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    .slider::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+    }
+
+    .slider::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+.slide {
+    scroll-snap-align: center;
+    flex: 0 0 100%;
+    position: relative;
+}
+
+    .slide img {
+        margin: 0;
+    }
+
+    .slide a {
+        position: absolute;
+        height: 100%;
+        width: 8rem;
+        top: 0;
+        /* left: 0; */
+        display: grid;
+        place-items: center;
+        background: none;
+        opacity: 0.6;
+        transition: all .3s;
+    }
+
+        .slide a.slider_prev {
+            left: 0;
+        }
+
+        .slide a.slider_next {
+            right: 0;
+        }
+
+        .slide a:hover {
+            background: none;
+            opacity: 1;
+        }
+
+        .slide a svg {
+            height: 10rem;
+            stroke-width: 3px;
+        }
+
+        .slide a.slider_next svg {
+            transform: rotate(180deg);
+        }
 
 @media screen and (max-width: 1915px) {
 
