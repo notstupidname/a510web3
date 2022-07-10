@@ -1,5 +1,9 @@
 :root {
-	--text-color: #ebe1da;
-	--back-color: #000;
-	--mid-color: #ccc;
+    --text-color: #ebe1da;
+    --back-color: #000;
+    --mid-color: #ccc;
+}
+
+img {
+    filter: brightness(0.9) contrast(1.1) saturate(0.9);
 }
