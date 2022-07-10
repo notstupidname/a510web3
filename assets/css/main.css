@@ -436,7 +436,7 @@ main {
             overflow-x: scroll;
         }
     
-        .slide a {
+        .slide a svg {
             display: none;
         }
 
