@@ -381,6 +381,7 @@ main {
     overflow-x: hidden;
     scroll-behavior: smooth;
     display: flex;
+    margin-bottom: 2rem;
     -webkit-overflow-scrolling: touch;
 }
 
