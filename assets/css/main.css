@@ -160,7 +160,7 @@ img {
 
 table {
     margin: 0 0 2em 0;
-    width: 100%;
+    width: clamp(320px, 100%, 30em);
 }
 
     table tbody tr {
