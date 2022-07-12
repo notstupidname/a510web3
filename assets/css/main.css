@@ -19,7 +19,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 18px;
+    font-size: 16px;
     scrollbar-width: thin;
     scrollbar-gutter: stable;
     scrollbar-color: var(--text-color) var(--back-color);
