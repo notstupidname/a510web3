@@ -160,13 +160,9 @@ img {
 
 /* Table */
 
-.table-wrapper {
-    overflow-x: auto;
-}
-
 table {
     margin: 0 0 2em 0;
-    width: clamp(320px, 100%, 30em);
+    width: clamp(320px, 100%, 50em);
 }
 
     table tbody tr {
