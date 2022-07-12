@@ -137,7 +137,7 @@ a {
     background-size: 200% .1em;
     background-position: 200% 100%;
     background-repeat: no-repeat;
-    transition: background-position .3s;
+    transition: all .3s;
 }
 
     a:hover {
@@ -253,9 +253,15 @@ ul.breadcrumbs {
         letter-spacing: 0.1em;
     }
 
-        #header a.logo:hover {
-            /* background: var(--back-color);
-            color: var(--text-color); */
+    #header a.logo #LWPOLYLINE {
+        fill: var(--text-color);
+        stroke: var(--text-color);
+        transition: all .3s;
+    }
+    
+        #header a.logo:hover #LWPOLYLINE {
+            fill: var(--back-color);
+            stroke: var(--back-color);
         }
 
         #header a:not(:first-child) {

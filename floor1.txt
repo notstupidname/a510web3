@@ -1,4 +1,4 @@
-<svg id="svg_plan" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="288pt" version="1.1" style="--lw-1:0.05; --lw-2:0.09; --lw-3:0.13; --lw-4:0.3; --lw-5:0.4; width: 100%; height: auto; max-height: 75vh; --lw-6:0.5;" viewBox="0 0 458.950137 288" width="458.950137pt">
+<svg id="svg_plan" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="288pt" version="1.1" style="--lw-1:0.05; --lw-2:0.09; --lw-3:0.13; --lw-4:0.3; --lw-5:0.4; width: 100%; height: auto; max-height: 75vh; --lw-6:0.5;max-width: 80rem;" viewBox="0 0 458.950137 288" width="458.950137pt">
         <defs>
         <style type="text/css">
                *{stroke-linecap:square;stroke-linejoin:round;}

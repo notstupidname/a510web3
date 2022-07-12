@@ -25,9 +25,9 @@ permalink: /proekty/project
         <h2>План 2-го этажа</h2>
     </div>
     {% include_relative floor1.txt %}
-    <div class="container">
-        <h2>Технические характеристики</h2>
-        <div class="table-wrapper">
+    <div class="container" style="display: grid;grid-template-columns: 1fr 1fr;gap: 0 3rem;">
+        <div>
+            <h2>Технические характеристики</h2>
             <table>
                 <tbody>
                     <tr>
@@ -80,6 +80,40 @@ permalink: /proekty/project
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div>
+            <h2>Стоимость</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Готовый проект *</td>
+                        <td>120 000 Р</td>
+                    </tr>
+                    <tr>
+                        <td>Инженерные системы</td>
+                        <td>200 000 Р</td>
+                    </tr>
+                    <tr>
+                        <td>Дизайн интерьера</td>
+                        <td>250 000 Р</td>
+                    </tr>
+                    <tr>
+                        <td>Индивидуальный проект</td>
+                        <td>от 300 000 Р</td>
+                    </tr>
+                    <tr>
+                        <td>План развития территории</td>
+                        <td>от 200 000 Р</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 0.9em;color: var(--mid-color);">* В состав проекта входят все чертежи, чтобы построить дом как на картинках. А ещё мы можем внести в проект изменения, если нужно.</p>
+            <a href="#">
+                <h3>Заказать проект</h3>
+            </a>
+            <a href="#">
+                <h3>Задать вопрос</h3>
+            </a>
         </div>
     </div>
     <div class="container">
