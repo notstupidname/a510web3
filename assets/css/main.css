@@ -380,7 +380,6 @@ main {
 
 .carousel {
     max-width: 1920px;
-    background: #ccc;
     display: flex;
     margin: 0 auto;
     position: relative;
@@ -424,37 +423,38 @@ main {
         object-fit: contain;
     }
 
-    .slide a {
-        position: absolute;
-        height: 100%;
-        width: 8rem;
-        top: 0;
-        display: grid;
-        place-items: center;
-        background: none;
-        opacity: 0.6;
-        transition: all .3s;
+.arrow {
+    position: absolute;
+    height: 100%;
+    width: 8rem;
+    top: 0;
+    display: grid;
+    place-items: center;
+    background: none;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+    .arrow.back {
+        left: 0;
     }
 
-        .slide a.slider_prev {
-            left: 0;
-        }
+    .arrow.forward {
+        right: 0;
+    }
 
-        .slide a.slider_next {
-            right: 0;
-        }
-
-        .slide a:hover {
+        .arrow:hover {
             background: none;
             opacity: 1;
         }
 
-        .slide a svg {
-            height: 8rem;
-            stroke-width: 3px;
-        }
+    .arrow svg {
+        height: 8rem;
+        stroke-width: 3px;
+    }
 
-        .slide a.slider_next svg {
+        .arrow.forward svg {
             transform: rotate(180deg);
         }
         
@@ -462,10 +462,6 @@ main {
 
         .slider {
             overflow-x: scroll;
-        }
-    
-        .slide a svg {
-            display: none;
         }
 
     }
