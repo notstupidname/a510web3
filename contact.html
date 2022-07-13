@@ -87,7 +87,7 @@ permalink: /contact
         </div>
     </div>
     <div class="container big">
-        <div id="map" style="max-height: 80vh;width: 100%;aspect-ratio: 3/2;"></div>
+        <div id="map" style="max-height: 80vh;width: 100%;aspect-ratio: 3/2;margin-top: 2rem;"></div>
     </div>
 </main>
 
@@ -123,8 +123,8 @@ permalink: /contact
         var mapElement = document.getElementById('map');
         var map = new google.maps.Map(mapElement, mapOptions);
         var locations = [
-            ['Главный офис', 'Неманский пр-д, д. 18c3', '+7 (926) 136-96-23', 'undefined', 'undefined', 55.468812, 37.296441, '/images/solid-pin-black.png'],
-            ['Офис КЗ', 'Неманский пр-д, д. 18c3', '+7 (926) 136-96-23', 'undefined', 'undefined', 43.228207, 76.957421, '/images/solid-pin-black.png'],
+            ['Главный офис', 'undefined', 'undefined', 'undefined', 'undefined', 55.468812, 37.296441, '/images/solid-pin-black.png'],
+            ['Офис КЗ', 'undefined', 'undefined', 'undefined', 'undefined', 43.228207, 76.957421, '/images/solid-pin-black.png'],
             ['Офис КГД', 'Неманский пр-д, д. 18c3', '+7 (926) 136-96-23', 'undefined', 'undefined', 54.725781, 20.501184, '/images/solid-pin-black.png']
         ];
         for (i = 0; i < locations.length; i++) {
