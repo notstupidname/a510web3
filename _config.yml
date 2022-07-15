@@ -2,7 +2,7 @@ plugins:
   - jekyll-seo-tag
   
 collections:
-  projects:
+  proekty:
     output: true
 
 social:
@@ -12,7 +12,7 @@ social:
     - http://instagram.com/a510ru
 
 logo: /images/logo.png
-url: https://notstupid.name
+url: https://a510.ru
 
 title: ""
 lang: "ru_RU"

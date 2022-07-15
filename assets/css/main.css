@@ -504,7 +504,7 @@ main {
 /* Slider */
 
 .carousel {
-    max-width: 1920px;
+    max-width: 2560px;
     display: flex;
     margin: 0 auto;
     position: relative;

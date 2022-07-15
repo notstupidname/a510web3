@@ -1,0 +1,31 @@
+<!-- <ul class="breadcrumbs">
+    <li><a href="#">Главная</a></li>
+    <li><span>Проекты</span></li>
+</ul> -->
+
+<ul class="breadcrumbs">
+    <li><a href="/">Главная</a></li>
+    {%-assign crumbs = page.url | split: '/'-%}
+    {%-assign full_url = "/"-%}
+    {%-for crumb in crumbs offset: 1-%}
+        {%-assign full_url = full_url | append: crumb | append: "/"-%}
+        {%-if forloop.last-%}
+            <li>{{page.page-short-title}}</li>
+        {%-else-%}
+        {%-assign crumb_title = ""-%}
+        {%-for p in site.pages-%}
+            {%-if p.url == full_url-%}
+                {%-capture crumb_title-%}{{p.page-short-title}}{%-endcapture-%}
+            {%-endif-%}
+        {%-endfor-%}
+        {%-if crumb_title == ""-%}
+            {%-for p in site.proekty-%}
+                {%-if p.url == full_url-%}
+                    {%-capture crumb_title-%}{{p.page-short-title}}{%-endcapture-%}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+            <li><a href="{{full_url}}">{{crumb_title}}</a></li>
+        {%-endif-%}
+    {%-endfor-%}
+</ul>
