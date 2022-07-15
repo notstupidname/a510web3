@@ -59,6 +59,14 @@ table {
     border-spacing: 0;
 }
 
+button {
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
 /* Basic */
 
 @media screen and (max-width: 480px) {
@@ -72,6 +80,7 @@ table {
 
 body {
     background: var(--back-color);
+    overflow-x: hidden;
 }
 
     body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -125,7 +134,12 @@ sup {
     top: -0.5em;
 }
 
-a {
+hr {
+    border: 0;
+    margin: 1em 0;
+}
+
+a, .button {
     color: var(--text-color);
     text-decoration: none;
     transition: all 0.3s ease-in-out;
@@ -143,22 +157,19 @@ a {
     transition: all .3s;
 }
 
-    a:hover {
-        /* opacity: 0.85;
-        --p: 100%; */
-       /*  background-color: var(--text-color); */
-        /* color: var(--back-color); */
+    a:hover, .button:hover {
+        opacity: 0.85;
         background-position: 100% 100%;
     }
-    
+
     a:active {
-        opacity: 0.85;
+        opacity: 0.65;
     }
 
 img {
     max-inline-size: 100%;
     block-size: auto;
-    }
+}
 
 
 /* Table */
@@ -250,6 +261,32 @@ textarea:focus {
 textarea {
     padding: 0.75em 1em;
 }
+
+.button {
+    text-transform: uppercase;
+    font-family: 'Oswald';
+    letter-spacing: .1em;
+    font-size: 1.4rem;
+    line-height: 1.4em;
+    color: var(--text-color);
+    cursor: pointer;
+    width: fit-content;
+}
+
+    .button svg {
+        height: 0.82em;
+        width: 0.75em;
+        transform: rotate(180deg);
+        stroke-width: 10px;
+        margin-left: -0.25em
+    }
+
+    .button.special {
+        background: var(--text-color);
+        color: var(--back-color);
+        stroke: var(--back-color);
+        padding: 0.25em 0 0.25em 0.25em;
+    }
 
 /* Layout */
 
@@ -412,7 +449,7 @@ main {
     }
 
 .contacts-list {
-    line-height: 2em;
+    line-height: 2.25em;
 }
 
     .contacts-list li a {
@@ -421,6 +458,13 @@ main {
 
         .contacts-list li a:hover {
             opacity: .85;
+        }
+
+        .contacts-list li svg{
+            height: 1em;
+            position: relative;
+            top: 2px;
+            padding-right: 0.5em;
         }
 
 .projects-grid {
