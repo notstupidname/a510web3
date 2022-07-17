@@ -428,6 +428,22 @@ main {
     margin: 0 0 2rem;
 }
 
+.svg-drawing {
+    --lw-1:0.05%;
+    --lw-2:0.03%;
+    --lw-3:0.13%;
+    --lw-4:0.2%;
+    --lw-5:0.2%;
+    --lw-6:0.3%;
+    width:100%;
+    height:auto;
+    max-height:75vh;
+    max-width:80rem;
+    stroke-linecap:square;
+    fill:none;
+    stroke:var(--text-color);
+}
+
 .worklist {
     display: flex;
     gap: 0.5rem 1.5rem;
