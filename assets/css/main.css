@@ -355,8 +355,9 @@ ul.breadcrumbs {
     }
     
         #header a.logo:hover #LWPOLYLINE {
-            fill: var(--back-color);
-            stroke: var(--back-color);
+            /* fill: var(--back-color);
+            stroke: var(--back-color); */
+            opacity: 0.5;
         }
 
         #header a:not(:first-child) {
