@@ -414,6 +414,10 @@ main {
         width: clamp(200px, 100%, 65rem);
     }
 
+    .container.drawing {
+        width: clamp(200px, 100%, 80rem);
+    }
+
 .two-columns {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(23.5em, 100%), 1fr));
@@ -442,8 +446,8 @@ main {
     stroke-linecap:square;
     fill:none;
     stroke:var(--text-color);
-    --dxf-small-font: 2500%;
-    --dxf-big-font: 3500%;
+    --dxf-small-font: 2000%;
+    --dxf-big-font: 2500%;
 }
 
 .worklist {
@@ -641,6 +645,10 @@ main {
         padding: 0;
     }
 
+    .container.drawing {
+        width: calc(100% - 4rem);
+    }
+
     .container.big .caption {
         padding: 0 2rem;
     }
@@ -686,6 +694,10 @@ main {
         width: calc(100% - 2rem);
     }
 
+    .container.drawing {
+        width: calc(100% - 2rem);
+    }
+
     .container.big .caption {
         padding: 0 1rem;
     }
@@ -702,6 +714,11 @@ main {
 
     .arrow svg {
         height: 4rem;
+    }
+
+    .svg-drawing {
+        --dxf-small-font: 2500%;
+        --dxf-big-font: 3500%;
     }
 
 
