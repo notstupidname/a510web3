@@ -437,7 +437,7 @@ permalink: /contact
         var locations = [
             ['Главный офис', 'undefined', 'undefined', 'undefined', 'undefined', 55.468812, 37.296441, '/images/solid-pin-white.png'],
             ['Офис КЗ', 'undefined', 'undefined', 'undefined', 'undefined', 43.228207, 76.957421, '/images/solid-pin-white.png'],
-            ['Офис КГД', 'Неманский пр-д, д. 18c3', '+7 (926) 136-96-23', 'undefined', 'undefined', 54.725781, 20.501184, '/images/solid-pin-white.png']
+            ['Офис КГД', 'undefined', 'undefined', 'undefined', 'undefined', 54.725781, 20.501184, '/images/solid-pin-white.png']
         ];
         for (i = 0; i < locations.length; i++) {
             if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
@@ -478,7 +478,7 @@ link = web;
                     iw.close();
                     infoWindowVisible(false);
                 } else {
-                    var html= "<div style='color:#100e11;background-color:#fff;padding:5px;width:250px;'><h4>"+title+"</h4><p>"+desc+"<p><p>"+telephone+"<p><a href='mailto:"+email+"' >"+email+"<a><a href='"+link+"'' >"+web+"<a></div>";
+                    var html= "<div style='color:#000;background-color:#fff;padding:5px;max-width:250px;'><h4>"+title+"</h4><p>"+desc+"<p><p>"+telephone+"<p><a href='mailto:"+email+"' >"+email+"<a><a href='"+link+"'' >"+web+"<a></div>";
                     iw = new google.maps.InfoWindow({content:html});
                     iw.open(map,marker);
                     infoWindowVisible(true);
