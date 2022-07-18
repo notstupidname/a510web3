@@ -442,6 +442,8 @@ main {
     stroke-linecap:square;
     fill:none;
     stroke:var(--text-color);
+    --dxf-small-font: 2500%;
+    --dxf-big-font: 3500%;
 }
 
 .worklist {
