@@ -543,6 +543,7 @@ main {
     /* gap: 10px; */
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
+    scrollbar-gutter: auto;
 }
 
     .slider::-webkit-scrollbar {
@@ -560,9 +561,10 @@ main {
 
 .slide {
     scroll-snap-align: center;
-    flex: 0 0 100%;
+    /* flex: 0 0 100%; */
     display: grid;
     place-items: center;
+    min-width: 100%;
 }
 
     .slide img {
