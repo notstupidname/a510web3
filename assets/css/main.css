@@ -124,7 +124,7 @@ h4 {
 
 p {
     margin-bottom: 1em;
-    max-width: 50em;
+    max-width: 60em;
 }
 
 sup {
@@ -175,7 +175,7 @@ img {
 
 table {
     margin: 0 0 2em 0;
-    width: clamp(320px, 100%, 50em);
+    width: clamp(320px, 100%, 60em);
 }
 
     table tbody tr {
@@ -408,12 +408,12 @@ main {
 }
 
 .container {
-    width: clamp(200px, 100%, 50rem);
+    width: clamp(200px, 100%, 60rem);
 }
 
-    .container.big {
+/*     .container.big {
         width: clamp(200px, 100%, 65rem);
-    }
+    } */
 
     .container.drawing {
         width: clamp(200px, 100%, 80rem);
@@ -421,7 +421,7 @@ main {
 
 .two-columns {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(23.5em, 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(28.5em, 100%), 1fr));
     gap: 0 3rem;
 }
 
@@ -443,7 +443,7 @@ main {
     width:100%;
     height:auto;
     max-height:70vh;
-    max-width:80rem;
+    max-width:60rem;
     stroke-linecap:square;
     fill:none;
     stroke:var(--text-color);
@@ -458,7 +458,7 @@ main {
     padding: 2.6rem 0 1rem;
     position: sticky;
     top: 0;
-    width: clamp(200px,100%,65rem);
+    width: clamp(200px,100%,60rem);
     background: var(--back-color);
     z-index: 100;
 }
@@ -569,7 +569,7 @@ main {
 
     .slide img {
         width: 100%;
-        max-height: 70vh;
+        max-height: 85vh;
         object-fit: cover;
         aspect-ratio: 3/2;
     }

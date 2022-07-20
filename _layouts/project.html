@@ -4,18 +4,16 @@
     <body class="is-loading">
         {% include header.html %}
         <main>
-            <div class="container drawing">
-                <div>
-                    <img class="image"
-                        style="max-height: 70vh;aspect-ratio:3/2;object-fit:cover;width:fit-content;margin-inline: auto;"
-                        alt="Каркасный дуплекс ТМ-120"
-                        title="Каркасный дуплекс ТМ-120"
-                        width="1920"
-                        height="1080"
-                        src="/images/kgd/kgd-01_1920w.jpg"
-                        srcset="/images/kgd/kgd-01_1600w.jpg 1600w, /images/kgd/kgd-01_1200w.jpg 1200w, /images/kgd/kgd-01_800w.jpg 800w,  /images/kgd/kgd-01_400w.jpg 400w"
-                    >
-                </div>
+            <div class="container big">
+                <img class="image"
+                    style="max-height: 70vh;aspect-ratio:3/2;object-fit:cover;width:fit-content;margin-inline:auto;width:clamp(20px,100%,60rem);"
+                    alt="Каркасный дуплекс ТМ-120"
+                    title="Каркасный дуплекс ТМ-120"
+                    width="1920"
+                    height="1080"
+                    src="/images/kgd/kgd-01_1920w.jpg"
+                    srcset="/images/kgd/kgd-01_1600w.jpg 1600w, /images/kgd/kgd-01_1200w.jpg 1200w, /images/kgd/kgd-01_800w.jpg 800w,  /images/kgd/kgd-01_400w.jpg 400w"
+                >
             </div>
             <div class="container">
                 <ul class="breadcrumbs">
@@ -30,14 +28,14 @@
             <div class="container">
                 <h2>План 1-го этажа</h2>
             </div>
-            <div class="container drawing">
-                {% include_relative floor2.svg %}
+            <div class="container">
+                {% include_relative floor3.svg %}
             </div>
             <hr>
             <div class="container">
                 <h2>План 2-го этажа</h2>
             </div>
-            <div class="container drawing">
+            <div class="container">
                 {% include_relative floor3.svg %}
             </div>
             <hr>
@@ -152,11 +150,12 @@
                     </div>
                 </div>
             </div>
-            <hr />
+            <hr>
+            <hr>
             <div class="container">
                 <h2>Галерея</h2>
             </div>
-            <div class="container drawing">
+
                 <div class="carousel">
                     <div class="slider">
                         <div class="slide">
@@ -216,12 +215,13 @@
                         </svg>
                     </div>
                 </div>
-            </div>
+            <hr>
             <div class="container">
                 <h2>Еще какой-то заголовок</h2>
                 <p>Проект - финалист конкурса на жилье нового типа для молодых семей. Две основные составляющие это проекта - самые бюджетные материалы и современная архитектура. Идеальная планировка, простая и чистая форма в сочетании с технологией каркасного строительства и дешевыми строительными конструкциями позволили сделать красивый, функциональный и экономичный дуплекс. Профлист - один из самых доступных материалов на рынке - основной отделочный материал всего дома. Стоимость строительства можно уменьшать за счет сокращения остекления секций не ухудшая внешний вид дома.</p>
             </div>
             <img class="image" src="/images/6.png">
+            <hr>
             <div class="container">
                 <h2>Похожие проекты</h2>
             </div>
