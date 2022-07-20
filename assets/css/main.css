@@ -588,6 +588,7 @@ main {
     opacity: 0.6;
     cursor: pointer;
     transition: all .3s;
+    z-index: 1000;
 }
 
     .arrow.back {
@@ -620,7 +621,7 @@ main {
 
     }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1595px) {
 
     #header {
         top: auto;
