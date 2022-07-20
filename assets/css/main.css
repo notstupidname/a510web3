@@ -544,6 +544,7 @@ main {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
     scrollbar-gutter: auto;
+    scroll-snap-stop: always;
 }
 
     .slider::-webkit-scrollbar {
