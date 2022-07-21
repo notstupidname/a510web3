@@ -421,7 +421,7 @@ main {
 
 .two-columns {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(28.5em, 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(23.5em, 100%), 1fr));
     gap: 0 3rem;
 }
 
@@ -521,8 +521,6 @@ main {
 
     .projects-item .caption p {
         color: var(--mid-color);
-        font-stretch: condensed;
-        letter-spacing: 0.1em;
     }
 
 /* Slider */
@@ -588,7 +586,6 @@ main {
     opacity: 0.6;
     cursor: pointer;
     transition: all .3s;
-    z-index: 1000;
 }
 
     .arrow.back {

@@ -3,12 +3,6 @@
 
     const body = document.querySelector('body');
 
-    // Loading animation
-    window.addEventListener('load', function() {
-        body.classList.remove('is-loading');
-        body.classList.remove('transition');
-    });
-
     // Transition effect
     let transition = function(e) {
         let href = this.getAttribute('href');
@@ -65,7 +59,6 @@
         });
         // Slide transition
         const getNewScrollPosition = (arg) => {
-            const gap = 10;
             const maxScrollLeft = slideContainerEl.scrollWidth - slideWidth;
             if (arg === "forward") {
                 const x = slideContainerEl.scrollLeft + slideWidth;
@@ -83,6 +76,13 @@
         }
 
     }
-    Carousel();
+    
+    // Loading animation
+    window.addEventListener('load', function() {
+        body.classList.remove('is-loading');
+        body.classList.remove('transition');
+        Carousel();
+    });
+
 
 })();
