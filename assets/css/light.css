@@ -4,3 +4,7 @@
     --mid-color: #666;
     --light-color: rgba(144, 144, 144, 0.25);
 }
+
+html {
+    font-weight: 325;
+}
