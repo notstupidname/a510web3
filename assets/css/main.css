@@ -432,6 +432,14 @@ main {
     margin: 0 0 2rem;
 }
 
+.image.photo {
+    width: auto;
+    height: auto;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    margin: 0 0 3rem;
+}
+
 .svg-drawing {
     --lw-1:0.05%;
     --lw-2:0.075%;
