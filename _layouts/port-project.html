@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+    {% include head.html %}
+    <body class="is-loading">
+        {% include header.html %}
+        <main>
+            <div class="container big">
+                <img class="image"
+                    style="max-height: 70vh;object-fit:cover;width:fit-content;margin-inline:auto;width:clamp(20px,100%,60rem);"
+                    alt="Каркасный дуплекс ТМ-120"
+                    title="Каркасный дуплекс ТМ-120"
+                    width="1920"
+                    height="1080"
+                    src="/images/rez/rez-01_1920w.jpg"
+                    srcset="/images/rez/rez-01_1600w.jpg 1600w, /images/rez/rez-01_1200w.jpg 1200w, /images/rez/rez-01_800w.jpg 800w,  /images/rez/rez-01_400w.jpg 400w"
+                >
+            </div>
+            <div class="container">
+                {% include breadcrumbs.html %}
+                <h1>{{page.page-title}}</h1>
+                <p>{{page.short-description}}</p>
+            </div>
+            <div class="container">
+                <h2>Заголовок таблицы</h2>
+                <table>
+                    <tbody>
+                        {% for option in page.options %}
+                        <tr>
+                            <td>{{ option.name }}</td>
+                            <td>{{ option.value }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% assign plans_array = "" | split:"," %}
+            {% assign url_list = page.url | split: "/" %}
+            {% assign project_name = url_list | last %}
+            {% for file in site.collections[1].files %}
+                {% if file.path contains project_name %}
+                    {% assign plans_array = plans_array | push: file.path %}
+                {% endif %}
+            {% endfor %}
+            {% if page.basement %}
+                {% assign index = 0 %}
+            {% else %}
+                {% assign index = 1 %}
+            {% endif %}
+            {% for plan in plans_array %}
+                {% assign url_list = plan | split: "/" %}
+                {% assign plan_name = url_list | last %}
+                {% if index==0 %}
+                <div class="container">
+                    <h2>План подвала</h2>
+                </div>
+                <div class="container">
+                    {% include_relative {{plan_name}} %}
+                </div>
+                {% else %}
+                <div class="container">
+                    <h2>План {{index}}-го этажа</h2>
+                </div>
+                <div class="container">
+                    {% include_relative {{plan_name}} %}
+                </div>
+                {% endif %}
+                {% assign index = index | plus:1 %}
+            {% endfor %}
+            <hr>
+            <div class="container">
+                <h2>Еще какой-то заголовок</h2>
+                <p>Проект - финалист конкурса на жилье нового типа для молодых семей. Две основные составляющие это проекта - самые бюджетные материалы и современная архитектура. Идеальная планировка, простая и чистая форма в сочетании с технологией каркасного строительства и дешевыми строительными конструкциями позволили сделать красивый, функциональный и экономичный дуплекс. Профлист - один из самых доступных материалов на рынке - основной отделочный материал всего дома. Стоимость строительства можно уменьшать за счет сокращения остекления секций не ухудшая внешний вид дома.</p>
+            </div>
+            <div class="container">
+                <h2>Галерея</h2>
+            </div>
+            <div class="carousel">
+                <div class="slider">
+                    <div class="slide">
+                        <img
+                            alt="Каркасный дуплекс ТМ-120"
+                            title="Каркасный дуплекс ТМ-120"
+                            width="1920"
+                            height="1080"
+                            src="/images/rez/rez-01_1920w.jpg"
+                            srcset="/images/rez/rez-01_1920w.jpg 1920w, /images/rez/rez-01_1600w.jpg 1600w, /images/rez/rez-01_1200w.jpg 1200w, /images/rez/rez-01_800w.jpg 800w,  /images/rez/rez-01_400w.jpg 400w"
+                        >
+                    </div>
+                    <div class="slide">
+                        <img
+                            alt="Каркасный дуплекс ТМ-120"
+                            title="Каркасный дуплекс ТМ-120"
+                            width="1920"
+                            height="1080"
+                            src="/images/dom2/dom2-01_1920w.jpg"
+                            srcset="/images/dom2/dom2-01_1920w.jpg 1920w, /images/dom2/dom2-01_1600w.jpg 1600w, /images/dom2/dom2-01_1200w.jpg 1200w, /images/dom2/dom2-01_800w.jpg 800w,  /images/dom2/dom2-01_400w.jpg 400w"
+                        >
+                    </div>
+                    <div class="slide">
+                        <img
+                            alt="Каркасный дуплекс ТМ-120"
+                            title="Каркасный дуплекс ТМ-120"
+                            width="1920"
+                            height="1080"
+                            src="/images/dom1/dom1-01_1920w.jpg"
+                            srcset="/images/dom1/dom1-01_1920w.jpg 1920w, /images/dom1/dom1-01_1600w.jpg 1600w, /images/dom1/dom1-01_1200w.jpg 1200w, /images/dom1/dom1-01_800w.jpg 800w,  /images/dom1/dom1-01_400w.jpg 400w"
+                        >
+                    </div>
+                </div>
+                <div id="button_bck" class="arrow back">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 174" xml:space="preserve">
+                        <g id="LINE">
+                            <line class="st0" x1="0.5" y1="86.9" x2="50.5" y2="0.3"/>
+                        </g>
+                        <g id="LINE_1_">
+                            <line class="st1" x1="0.5" y1="86.9" x2="50.5" y2="173.5"/>
+                        </g>
+                    </svg>
+                </div>
+                <div id="button_fwd" class="arrow forward">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 174" xml:space="preserve">
+                        <g id="LINE">
+                            <line class="st0" x1="0.5" y1="86.9" x2="50.5" y2="0.3"/>
+                        </g>
+                        <g id="LINE_1_">
+                            <line class="st1" x1="0.5" y1="86.9" x2="50.5" y2="173.5"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <hr>
+            <div class="container">
+                <h2>Еще какой-то заголовок</h2>
+                <p>Проект - финалист конкурса на жилье нового типа для молодых семей. Две основные составляющие это проекта - самые бюджетные материалы и современная архитектура. Идеальная планировка, простая и чистая форма в сочетании с технологией каркасного строительства и дешевыми строительными конструкциями позволили сделать красивый, функциональный и экономичный дуплекс. Профлист - один из самых доступных материалов на рынке - основной отделочный материал всего дома. Стоимость строительства можно уменьшать за счет сокращения остекления секций не ухудшая внешний вид дома.</p>
+            </div>
+            <hr>
+            {% include related.html %}
+            {% include cta.html %}
+        </main>
+        {% include footer.html %}
+        <!-- Scripts -->
+        {% include scripts.html %}
+    </body>
+</html>
