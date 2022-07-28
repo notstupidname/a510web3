@@ -35,6 +35,12 @@ ul {
 
 @media print {
 
+    @page {
+
+        margin: 1cm;
+
+    }
+
     #header, #footer {
         display: none;
     }
@@ -42,10 +48,8 @@ ul {
     body {
         font-size: 14px;
     }
-}
 
-@page {
-
-    margin: 1cm;
-
+    hr {
+        page-break-after: always;
+    }
 }
