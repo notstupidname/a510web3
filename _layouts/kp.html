@@ -2,17 +2,12 @@
 <html lang="ru">
     {% include head.html %}
     <body class="is-loading">
+        <link rel="stylesheet" href="/assets/css/kp.min.css" />
         {% include header.html %}
         <main>
             <div class="container">
-                <p>27/07/2022</p>
-                <h1>Коммерческое предложение</h1>
-                <p>{{page.short-description}}</p>
-            </div>
-            <div class="container">
                 {{content}}
             </div>
-            {% include cta.html %}
         </main>
         {% include footer.html %}
         <!-- Scripts -->
