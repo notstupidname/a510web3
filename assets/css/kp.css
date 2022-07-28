@@ -32,3 +32,20 @@ ul {
     }
 
 }
+
+@media print {
+
+    #header, #footer {
+        display: none;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}
+
+@page {
+
+    margin: 1cm;
+
+}
