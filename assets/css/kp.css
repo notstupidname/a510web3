@@ -49,11 +49,19 @@ ul {
         font-size: 14px;
     }
 
-    hr {
+    /* hr {
         page-break-after: always;
-    }
+    } */
 
     ul {
         page-break-inside: avoid;
+    }
+
+    h2:not(:first-of-type) {
+        page-break-before: always;
+    }
+
+    table tbody tr {
+        border: none;
     }
 }
