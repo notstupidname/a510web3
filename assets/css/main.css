@@ -462,6 +462,15 @@ main {
     --dxf-big-font: 2500%;
 }
 
+    .svg-drawing .area {
+        fill: rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+    }
+
+    .svg-drawing .area:hover {
+        fill: rgba(255, 255, 255, 0.5);
+    }
+
 .worklist {
     display: flex;
     gap: 0.5rem 1rem;

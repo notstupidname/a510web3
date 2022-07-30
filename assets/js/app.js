@@ -81,8 +81,19 @@
     window.addEventListener('load', function() {
         body.classList.remove('is-loading');
         body.classList.remove('transition');
-        Carousel();
+        if (document.querySelector(".carousel")) {
+            Carousel();
+        }
     });
 
+    // Areas code
+    const areaAll = document.querySelectorAll('.area');
+    for (const area of areaAll) {
+        area.addEventListener('click', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            console.log("Click!")
+        })
+    }
 
 })();
