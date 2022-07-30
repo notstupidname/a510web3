@@ -87,13 +87,13 @@
     });
 
     // Areas code
-    const areaAll = document.querySelectorAll('.area');
+/*     const areaAll = document.querySelectorAll('.area');
     for (const area of areaAll) {
         area.addEventListener('click', function(e){
             e.preventDefault();
             e.stopPropagation();
             console.log("Click!")
         })
-    }
+    } */
 
 })();
