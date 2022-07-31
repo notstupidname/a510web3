@@ -684,39 +684,42 @@ main {
     height: 100%;
     background: var(--back-color);
     display: flex;
+    flex-direction: column;
 }
 
 .popup_close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 3rem;
-    width: 3rem;
+    position: relative;
+    align-self: flex-end;
+    height: 2.4rem;
+    width: 2.4rem;
     cursor: pointer;
-    transition: all .3s ease-in-out;
+    transition: transform .3s ease-in-out;
     z-index: 1000;
 }
 
     .popup_close:hover {
-        opacity: 0.65;
+        transform: scale(0.95);
+    }
+
+    .popup_close:active {
+        transform: scale(0.85);
     }
 
     .popup_close svg {
         width: 100%;
         height: 100%;
-        stroke-width: 3px;
+        stroke-width: 5px;
         position: absolute;
-        transform: none;
-        transition: transform 2.4s 2.6s;
+        transform: scale(0.6);
+        transition: transform .4s .3s ease-in-out;
     }
 
         .popup_overlay:not(.hide) .popup_close svg:first-child {
-            transition: transform 2.4s 2.6s;
-            transform: rotate(45deg);
+            transform: rotate(45deg) scale(1);
         }
 
         .popup_overlay:not(.hide) .popup_close svg:last-child {
-            transform: rotate(-45deg);
+            transform: rotate(-45deg) scale(1);
         }
 
 @media screen and (max-width: 1595px) {
@@ -910,7 +913,8 @@ body.transition:after {
 }
 
 .hide {
-    display: none !important;
+    /* display: none !important; */
+    visibility: hidden;
 }
 
 .fade-in{
