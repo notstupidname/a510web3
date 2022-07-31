@@ -87,13 +87,38 @@
     });
 
     // Areas code
-/*     const areaAll = document.querySelectorAll('.area');
+    const areaAll = document.querySelectorAll('.area');
     for (const area of areaAll) {
         area.addEventListener('click', function(e){
             e.preventDefault();
             e.stopPropagation();
-            console.log("Click!")
+            const popup_id = this.dataset.popup;
+            console.log(popup_id);
+            const popupEl = document.getElementById(popup_id);
+            if (popupEl) {
+                popupEl.classList.remove("hide");
+                popupEl.classList.add("fade-in");
+            }
         })
-    } */
+    }
+
+    const popupCloseAll = document.querySelectorAll('.popup_close');
+    for (const popupClose of popupCloseAll) {
+        popupClose.addEventListener('click', function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            const popup_id = this.dataset.popup;
+            console.log(popup_id);
+            const popupEl = document.getElementById(popup_id);
+            if (popupEl) {
+                popupEl.classList.remove("fade-in");
+                popupEl.classList.add("fade-out")
+                window.setTimeout(function() {
+                    popupEl.classList.add("hide");
+                    popupEl.classList.remove("fade-out");
+                }, 450, popupEl);
+            }
+        })
+    }
 
 })();

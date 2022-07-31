@@ -12,16 +12,53 @@ permalink: /
         <h2>Чо мы вообще делаем</h2>
     </div>
     <!-- <img class="image" src="/images/plan.png"> -->
-    <div style="position:relative;">
+    <div style="position:relative;" class="container">
         {% include_relative map.svg %}
-        <div id="popup1" class="overlay">
-            <a class="cancel" href="#"></a>
-            <div class="popup">
-                <h2>Info box</h2>
-                <div class="content">
-                    <p>This is done totally without JavaScript. Just HTML and CSS.</p>
-                </div>
+        <div id="popup1" class="popup_overlay container hide">
+            <div class="popup_close" data-popup="popup1">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5 100" xml:space="preserve">
+                    <g>
+                        <line x1="3" y1="0" x2="3" y2="100"/>
+                    </g>
+                </svg>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5 100" xml:space="preserve">
+                    <g>
+                        <line x1="3" y1="0" x2="3" y2="100"/>
+                    </g>
+                </svg>
             </div>
+            <h2>Popup 1</h2>
+            <p>Один абзац текста про то, какие мы крутые и вообще. Основная идея проекта — не только физическая реконструкция и реновация жилого фонда города, производства и инфраструктуры, но и переход на новую наукоемкую, осознанную и экологически чистую экономику.</p>
+        </div>
+        <div id="popup2" class="popup_overlay container hide">
+            <div class="popup_close" data-popup="popup2">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5 100" xml:space="preserve">
+                    <g>
+                        <line x1="3" y1="0" x2="3" y2="100"/>
+                    </g>
+                </svg>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5 100" xml:space="preserve">
+                    <g>
+                        <line x1="3" y1="0" x2="3" y2="100"/>
+                    </g>
+                </svg>
+            </div>
+            <h2>Popup 2</h2>
+        </div>
+        <div id="popup3" class="popup_overlay container hide">
+            <div class="popup_close" data-popup="popup3">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5 100" xml:space="preserve">
+                    <g>
+                        <line x1="3" y1="0" x2="3" y2="100"/>
+                    </g>
+                </svg>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5 100" xml:space="preserve">
+                    <g>
+                        <line x1="3" y1="0" x2="3" y2="100"/>
+                    </g>
+                </svg>
+            </div>
+            <h2>Popup 3</h2>
         </div>
     </div>
     <hr>

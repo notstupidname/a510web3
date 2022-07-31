@@ -674,6 +674,51 @@ main {
 
     }
 
+/* Index map */
+
+.popup_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--back-color);
+    display: flex;
+}
+
+.popup_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    z-index: 1000;
+}
+
+    .popup_close:hover {
+        opacity: 0.65;
+    }
+
+    .popup_close svg {
+        width: 100%;
+        height: 100%;
+        stroke-width: 3px;
+        position: absolute;
+        transform: none;
+        transition: transform 2.4s 2.6s;
+    }
+
+        .popup_overlay:not(.hide) .popup_close svg:first-child {
+            transition: transform 2.4s 2.6s;
+            transform: rotate(45deg);
+        }
+
+        .popup_overlay:not(.hide) .popup_close svg:last-child {
+            transform: rotate(-45deg);
+        }
+
 @media screen and (max-width: 1595px) {
 
     #header {
