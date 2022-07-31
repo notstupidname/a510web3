@@ -462,49 +462,6 @@ main {
     --dxf-big-font: 2500%;
 }
 
-    .svg-drawing .area {
-        fill: rgba(255, 255, 255, 0.1);
-        cursor: pointer;
-    }
-
-    .svg-drawing .area:hover {
-        fill: rgba(255, 255, 255, 0.5);
-    }
-
-    .overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0,0,0,0.5);
-        transition: opacity 200ms;
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    .overlay:target {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .cancel {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        cursor: default;
-    }
-
-    .popup {
-        margin: 75px auto;
-        padding: 20px;
-        background: #fff;
-        border: 1px solid #666;
-        width: 300px;
-        box-shadow: 0 0 50px rgba(0,0,0,0.5);
-        position: relative;
-    }
-
 .worklist {
     display: flex;
     gap: 0.5rem 1rem;
@@ -675,6 +632,16 @@ main {
     }
 
 /* Index map */
+
+.svg-drawing .area {
+    fill: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.svg-drawing .area:hover {
+    fill: rgba(255, 255, 255, 0.5);
+}
 
 .popup_overlay {
     position: absolute;
