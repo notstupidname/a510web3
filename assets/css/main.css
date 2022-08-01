@@ -745,14 +745,6 @@ main {
         grid-template-columns: 1fr;
     }
 
-    .arrow {
-        width: 4rem;
-    }
-
-    .arrow svg {
-        height: 6rem;
-    }
-
 }
 
 @media screen and (max-width: 550px) {
@@ -798,10 +790,6 @@ main {
 
     .arrow {
         width: 2rem;
-    }
-
-    .arrow svg {
-        height: 4rem;
     }
 
     .svg-drawing {
