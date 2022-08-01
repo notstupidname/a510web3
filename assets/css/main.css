@@ -634,13 +634,15 @@ main {
 /* Index map */
 
 .svg-drawing .area {
-    fill: rgba(255, 255, 255, 0.1);
+    fill: var(--text-color);
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
+    transition: opacity .4s ease-in-out;
+    opacity: .05;
 }
 
 .svg-drawing .area:hover {
-    fill: rgba(255, 255, 255, 0.5);
+    opacity: .25;
 }
 
 .popup_overlay {
