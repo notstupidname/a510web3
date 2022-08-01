@@ -615,7 +615,7 @@ main {
 
     .arrow svg {
         height: 4rem;
-        stroke-width: 3px;
+        stroke-width: 5px;
     }
 
         .arrow.forward svg {
