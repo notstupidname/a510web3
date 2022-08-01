@@ -590,7 +590,7 @@ main {
 .arrow {
     position: absolute;
     height: 100%;
-    width: 8rem;
+    width: 4rem;
     top: 0;
     display: grid;
     place-items: center;
@@ -614,7 +614,7 @@ main {
         }
 
     .arrow svg {
-        height: 8rem;
+        height: 4rem;
         stroke-width: 3px;
     }
 
