@@ -93,7 +93,6 @@
             e.preventDefault();
             e.stopPropagation();
             const popup_id = this.dataset.popup;
-            console.log(popup_id);
             const popupEl = document.getElementById(popup_id);
             if (popupEl) {
                 popupEl.classList.remove("hide");
@@ -108,7 +107,6 @@
             e.preventDefault();
             e.stopPropagation();
             const popup_id = this.dataset.popup;
-            console.log(popup_id);
             const popupEl = document.getElementById(popup_id);
             if (popupEl) {
                 popupEl.classList.remove("fade-in");
