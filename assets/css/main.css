@@ -682,8 +682,12 @@ main {
         stroke-width: 5px;
         position: absolute;
         transform: scale(0.6);
-        transition: transform .4s .3s ease-in-out;
+        transition: transform .4s .3s ease-in;
     }
+
+        .popup_close svg:last-child {
+            transition: transform .4s .6s ease-in;
+        }
 
         .popup_overlay:not(.hide) .popup_close svg:first-child {
             transform: rotate(45deg) scale(1);
