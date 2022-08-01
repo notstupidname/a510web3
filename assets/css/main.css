@@ -433,7 +433,7 @@ main {
     width: 100%;
     max-height: 85vh;
     object-fit: contain;
-    margin: 0 0 2rem;
+    margin: 1rem 0;
 }
 
 .image.photo {
@@ -441,7 +441,6 @@ main {
     height: auto;
     aspect-ratio: 3/2;
     object-fit: cover;
-    margin: 0 0 3rem;
 }
 
 .svg-drawing {
@@ -666,6 +665,7 @@ main {
     cursor: pointer;
     transition: transform .3s ease-in-out;
     z-index: 1000;
+    -webkit-tap-highlight-color: transparent;
 }
 
     .popup_close:hover {
