@@ -586,7 +586,7 @@ main {
 .arrow {
     position: absolute;
     height: 100%;
-    width: 8rem;
+    width: 4rem;
     top: 0;
     display: grid;
     place-items: center;
@@ -610,8 +610,8 @@ main {
         }
 
     .arrow svg {
-        height: 8rem;
-        stroke-width: 3px;
+        height: 4rem;
+        stroke-width: 5px;
     }
 
         .arrow.forward svg {
@@ -741,14 +741,6 @@ main {
         grid-template-columns: 1fr;
     }
 
-    .arrow {
-        width: 4rem;
-    }
-
-    .arrow svg {
-        height: 6rem;
-    }
-
 }
 
 @media screen and (max-width: 550px) {
@@ -794,10 +786,6 @@ main {
 
     .arrow {
         width: 2rem;
-    }
-
-    .arrow svg {
-        height: 4rem;
     }
 
     .svg-drawing {
