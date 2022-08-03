@@ -57,6 +57,22 @@
         window.addEventListener('resize', () => {
             slideWidth = slideEl.offsetWidth;
         });
+
+        function changeSlideWidth() {
+            slideWidth = slideEl.offsetWidth;
+        }
+
+        const touch = matchMedia('(hover: none), (pointer: coarse)').matches;
+        if (!touch) {
+            new ResizeObserver(changeSlideWidth).observe(carouselEl);
+
+            slideContainerEl.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                carouselEl.classList.toggle('big');
+            });
+        }
+
         // Slide transition
         const getNewScrollPosition = (arg) => {
             const maxScrollLeft = slideContainerEl.scrollWidth - slideWidth;
