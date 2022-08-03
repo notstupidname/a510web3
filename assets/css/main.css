@@ -592,8 +592,8 @@ main {
         width: auto;
         height: auto;
         max-height: 95vh;
-        object-fit: cover;
-        /* aspect-ratio: 3/2; */
+        object-fit: contain;
+        aspect-ratio: 16/9;
     }
 
 .arrow {
