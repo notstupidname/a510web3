@@ -531,7 +531,7 @@ main {
     .projects-item .caption p {
         color: var(--mid-color);
         font-stretch: condensed;
-        letter-spacing: 0.05em;
+        font-size: 0.9em;
     }
 
 /* Slider */
