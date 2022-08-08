@@ -5,7 +5,7 @@
     color: var(--text-color);
     fill: var(--text-color);
     stroke: var(--text-color);
-    --column-width: 60rem;
+    --column-width: 55rem;
 }
 
 ::selection {
@@ -126,7 +126,7 @@ h5 {
 
 p {
     margin-bottom: 1em;
-    max-width: 60em;
+    max-width: 55em;
 }
 
 sup {
@@ -549,7 +549,7 @@ main {
     }
 
     .carousel.big .slider {
-        cursor: zoom-out;
+        cursor: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJPdXRsaW5lIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PHBhdGggZD0iTTIzLjcwNywyMi4yOTNsLTUuOTY5LTUuOTY5YTEwLjAxNiwxMC4wMTYsMCwxLDAtMS40MTQsMS40MTRsNS45NjksNS45NjlhMSwxLDAsMCwwLDEuNDE0LTEuNDE0Wk0xMCwxOGE4LDgsMCwxLDEsOC04QTguMDA5LDguMDA5LDAsMCwxLDEwLDE4WiIvPjxwYXRoIGQ9Ik0xMyw5SDdhMSwxLDAsMCwwLDAsMmg2YTEsMSwwLDAsMCwwLTJaIi8+PC9zdmc+Cg=="), auto;
     }
 
 .slider {
@@ -564,7 +564,7 @@ main {
     scroll-behavior: smooth;
     scrollbar-gutter: auto;
     scroll-snap-stop: always;
-    cursor: zoom-in;
+    cursor: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJPdXRsaW5lIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiI+PHBhdGggZD0iTTIzLjcwNywyMi4yOTNsLTUuOTY5LTUuOTY5YTEwLjAxNiwxMC4wMTYsMCwxLDAtMS40MTQsMS40MTRsNS45NjksNS45NjlhMSwxLDAsMCwwLDEuNDE0LTEuNDE0Wk0xMCwxOGE4LDgsMCwxLDEsOC04QTguMDA5LDguMDA5LDAsMCwxLDEwLDE4WiIvPjxwYXRoIGQ9Ik0xMyw5SDExVjdBMSwxLDAsMCwwLDksN1Y5SDdhMSwxLDAsMCwwLDAsMkg5djJhMSwxLDAsMCwwLDIsMFYxMWgyYTEsMSwwLDAsMCwwLTJaIi8+PC9zdmc+Cg=="), auto;
 }
 
     .slider::-webkit-scrollbar {
@@ -586,6 +586,7 @@ main {
     display: grid;
     place-items: center;
     min-width: 100%;
+    scroll-snap-stop: always;
 }
 
     .slide img {
@@ -707,7 +708,7 @@ main {
             transform: rotate(-45deg) scale(1);
         }
 
-@media screen and (max-width: 1595px) {
+@media screen and (max-width: 1700px) {
 
     #header {
         top: auto;
@@ -859,7 +860,7 @@ main {
 body:after {
     -webkit-animation: overlay-hide 0.5s ease-in forwards !important;
     animation: overlay-hide 0.5s ease-in forwards !important;
-    background: var(--back-color);
+    background-color: var(--back-color);
     content: '';
     display: block;
     height: 100%;
@@ -869,6 +870,9 @@ body:after {
     top: 0;
     width: 100%;
     z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 4rem;
 }
 
 
