@@ -590,7 +590,7 @@ main {
 }
 
     .slide img {
-        width: auto;
+        /* width: auto; */
         height: auto;
         max-height: 95vh;
         object-fit: contain;
