@@ -1,16 +1,35 @@
-<aside id="cta">
+<aside id="cta" class="container">
     <h2>Есть вопросы?</h2>
     <p>Задайте их руководителю бюро</p>
     <hr>
-    <a href="#" class="button special">
-        <span>Получить консультацию</span>
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 174" xml:space="preserve">
-            <g id="LINE">
-                <line class="st0" x1="0.5" y1="86.9" x2="50.5" y2="0.3"/>
-            </g>
-            <g id="LINE_1_">
-                <line class="st1" x1="0.5" y1="86.9" x2="50.5" y2="173.5"/>
-            </g>
-        </svg>
-    </a>
+    <div class="form-wrapper fade-in">
+        <form id="form1" class="ajax-form">
+            <input type="text" class="name" name="name" placeholder="Ваше имя*" required="">
+            <input type="tel" class="tel" name="tel" placeholder="Номер телефона*" required="">
+            <button type="submit" class="button special">
+                <span>Получить консультацию</span>
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 174" xml:space="preserve">
+                    <g id="LINE">
+                        <line class="st0" x1="0.5" y1="86.9" x2="50.5" y2="0.3"/>
+                    </g>
+                    <g id="LINE_1_">
+                        <line class="st1" x1="0.5" y1="86.9" x2="50.5" y2="173.5"/>
+                    </g>
+                </svg>
+            </button>
+        </form>
+        <div class="form-loading fhide">
+            <h3>Отправка..</h3>
+            <p>Очень стараемся побыстрее отправить ваш заказ.</p>
+        </div>
+        <div class="form-success align-center fhide">
+            <h3>Спасибо!</h3>
+            <p>Мы отправили вам на почту письмо с подтверждением заказа и свяжемся с вами в самое ближайшее время!</p>
+        </div>
+        <div class="form-error align-center fhide">
+            <h3>Ой!</h3>
+            <p>Что-то пошло не так. Попробуйте отправить заказ чуть позже или просто позвоните нам.</p>
+        </div>
+    </div>
+
 </aside>

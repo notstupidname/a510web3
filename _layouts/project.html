@@ -85,7 +85,7 @@
                     </div>
                     <hr>
                     <div style="display:flex;flex-direction:column;gap: 1.5rem;align-items: flex-end;">
-                        <a href="#" class="button special">
+                        <a href="#" class="button special area" data-popup="popup1">
                             <span>Заказать проект</span>
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 174" xml:space="preserve">
                                 <g id="LINE">
@@ -169,7 +169,6 @@
                     </svg>
                 </div>
             </div>
-
             <hr>
             <div class="container">
                 <h2>Еще какой-то заголовок</h2>
@@ -178,6 +177,22 @@
             <hr>
             {% include related.html %}
             {% include cta.html %}
+            <div id="popup1" class="popup_overlay hide">
+                <div class="popup_close" data-popup="popup1">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5 100" xml:space="preserve">
+                        <g>
+                            <line x1="3" y1="0" x2="3" y2="100"/>
+                        </g>
+                    </svg>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5 100" xml:space="preserve">
+                        <g>
+                            <line x1="3" y1="0" x2="3" y2="100"/>
+                        </g>
+                    </svg>
+                </div>
+                <h3>Маленькие домики</h3>
+                <p>Маленькие домики сидят на грядке, потому что лучше мы ничего не придумали. Обычно мы стараемся сделать красиво, но тут нам было до пизды.</p>
+            </div>
         </main>
         {% include footer.html %}
         <!-- Scripts -->

@@ -102,7 +102,7 @@
         }
     });
 
-    // Areas code
+    // Map on index page
     const areaAll = document.querySelectorAll('.area');
     for (const area of areaAll) {
         area.addEventListener('click', function(e){

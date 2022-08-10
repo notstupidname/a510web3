@@ -15,6 +15,10 @@
 
 /* Reset */
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
     font-size: 18px;
@@ -208,6 +212,10 @@ form {
     gap: 1.6em;
 }
 
+.form-wrapper {
+    min-width: clamp(300px, 100%, 30rem);
+}
+
 input[type=email], input[type=password], input[type=tel], input[type=text], select, textarea {
     appearance: none;
     border-radius: 0;
@@ -397,6 +405,10 @@ ul.breadcrumbs {
     text-align: center;
     margin-top: 4rem;
 }
+
+    #cta form button {
+        align-self: center;
+    }
 
 main {
     margin: 0 4rem;
@@ -657,7 +669,6 @@ main {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    width: calc(100% - 2rem);
     padding: 1rem;
     background: var(--back-color);
     box-shadow: inset 0 0 0 1px var(--text-color);
@@ -729,16 +740,11 @@ main {
 
     .container, .worklist {
         padding: 0 2rem;
-        width: calc(100% - 4rem);
     }
 
     .container.big {
         width: 100%;
         padding: 0;
-    }
-
-    .container.drawing {
-        width: calc(100% - 4rem);
     }
 
     .container.big .caption {
@@ -779,11 +785,6 @@ main {
 
     .container{
         padding: 0 1rem;
-        width: calc(100% - 2rem);
-    }
-
-    .container.drawing {
-        width: calc(100% - 2rem);
     }
 
     .container.big .caption {
@@ -792,7 +793,6 @@ main {
 
     .worklist {
         position: relative;
-        width: calc(100% - 2rem);
         padding: 1rem 1rem;
     }
 
