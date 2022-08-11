@@ -696,6 +696,7 @@ main {
         left: 50%;
         transform: translate(-50%, -50%);
         width: clamp(300px, 95%, calc(var(--column-width) - 8rem));
+        max-height: 95vh;
     }
 
 .popup_close {
@@ -707,6 +708,7 @@ main {
     transition: transform .3s ease-in-out;
     z-index: 1000;
     -webkit-tap-highlight-color: transparent;
+    flex-shrink: 0;
 }
 
     .popup_close:hover {
