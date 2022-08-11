@@ -102,7 +102,7 @@
         }
     });
 
-    // Map on index page
+    // Popups
     const areaAll = document.querySelectorAll('.area');
     for (const area of areaAll) {
         area.addEventListener('click', function(e){
