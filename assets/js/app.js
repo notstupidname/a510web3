@@ -127,25 +127,43 @@
         popupClose.addEventListener('click', function(e){
             e.preventDefault();
             e.stopPropagation();
-            const popup_id = this.dataset.popup;
-            const popupEl = document.getElementById(popup_id);
-            if (popupEl) {
+            // const popup_id = this.dataset.popup;
+            // const popupEl = document.getElementById(popup_id);
+            const popupElAll = document.querySelectorAll('.popup_overlay');
+            for (const popupEl of popupElAll) {
                 popupEl.classList.remove("fade-in");
                 popupEl.classList.add("fade-out");
-                const globalOverlayEl = document.querySelector('.global_overlay');
-                if (globalOverlayEl) {
-                    globalOverlayEl.classList.remove("fade-in");
-                    globalOverlayEl.classList.add("fade-out");
-                }
                 window.setTimeout(function() {
                     popupEl.classList.add("hide");
                     popupEl.classList.remove("fade-out");
-                    if (globalOverlayEl) {
-                        globalOverlayEl.classList.add("hide");
-                        globalOverlayEl.classList.remove("fade-out");
-                    }
                 }, 450, popupEl);
             }
+            const globalOverlayEl = document.querySelector('.global_overlay');
+            if (globalOverlayEl) {
+                globalOverlayEl.classList.remove("fade-in");
+                globalOverlayEl.classList.add("fade-out");
+                window.setTimeout(function() {
+                    globalOverlayEl.classList.add("hide");
+                    globalOverlayEl.classList.remove("fade-out");
+                }, 450, globalOverlayEl);
+            }
+            // if (popupEl) {
+            //     popupEl.classList.remove("fade-in");
+            //     popupEl.classList.add("fade-out");
+            //     const globalOverlayEl = document.querySelector('.global_overlay');
+            //     if (globalOverlayEl) {
+            //         globalOverlayEl.classList.remove("fade-in");
+            //         globalOverlayEl.classList.add("fade-out");
+            //     }
+            //     window.setTimeout(function() {
+            //         popupEl.classList.add("hide");
+            //         popupEl.classList.remove("fade-out");
+            //         if (globalOverlayEl) {
+            //             globalOverlayEl.classList.add("hide");
+            //             globalOverlayEl.classList.remove("fade-out");
+            //         }
+            //     }, 450, popupEl);
+            // }
         })
     }
 
