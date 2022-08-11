@@ -141,8 +141,8 @@
                     popupEl.classList.add("hide");
                     popupEl.classList.remove("fade-out");
                     if (globalOverlayEl) {
-                        globalOverlayEl.classList.remove("fade-out");
                         globalOverlayEl.classList.add("hide");
+                        globalOverlayEl.classList.remove("fade-out");
                     }
                 }, 450, popupEl);
             }

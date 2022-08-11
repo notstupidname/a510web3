@@ -143,7 +143,7 @@ hr {
 a, .button {
     color: var(--text-color);
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
+    transition: opacity .3s ease-in-out, background-position .3s ease-in-out;;
     -webkit-tap-highlight-color: transparent;
     /* text-decoration: underline; */
     cursor: pointer;
@@ -155,7 +155,6 @@ a, .button {
     background-size: 200% .1em;
     background-position: 200% 100%;
     background-repeat: no-repeat;
-    transition: all .3s;
 }
 
     a:hover, .button:hover {
@@ -923,7 +922,7 @@ body.transition:after {
 }
 
 .fade-out{
-    animation: 0.5s fadeOut;
+    animation: 0.5s fadeOut ease-in forwards;
 }
   
 @keyframes fadeIn{
