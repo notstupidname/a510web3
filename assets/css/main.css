@@ -228,6 +228,11 @@ input[type=email], input[type=password], input[type=tel], input[type=text], sele
     font-size: 1rem;
 }
 
+    form.alt input {
+        border: 0;
+        border-bottom: solid 1px var(--light-color);
+    }
+
 input[type=email], input[type=password], input[type=tel], input[type=text], select {
     height: 2.75em;
 }
@@ -664,6 +669,16 @@ main {
     opacity: .25;
 }
 
+.global_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
+}
+
 .popup_overlay {
     position: absolute;
     top: 50%;
@@ -675,6 +690,13 @@ main {
     display: flex;
     flex-direction: column;
 }
+
+    .popup_overlay.fixed {
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: clamp(300px, 95%, calc(var(--column-width) - 8rem));
+    }
 
 .popup_close {
     position: relative;

@@ -96,7 +96,7 @@
                                 </g>
                             </svg>
                         </a>
-                        <a href="#" class="button">
+                        <a href="#" class="button area" data-popup="popup2">
                             <span>Задать вопрос</span>
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 174" xml:space="preserve">
                                 <g id="LINE">
@@ -177,21 +177,73 @@
             <hr>
             {% include related.html %}
             {% include cta.html %}
-            <div id="popup1" class="popup_overlay hide">
-                <div class="popup_close" data-popup="popup1">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5 100" xml:space="preserve">
-                        <g>
-                            <line x1="3" y1="0" x2="3" y2="100"/>
-                        </g>
-                    </svg>
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5 100" xml:space="preserve">
-                        <g>
-                            <line x1="3" y1="0" x2="3" y2="100"/>
-                        </g>
-                    </svg>
+            <div class="global_overlay hide">
+                <div id="popup1" class="popup_overlay fixed hide">
+                    <div class="popup_close" data-popup="popup1">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5 100" xml:space="preserve">
+                            <g>
+                                <line x1="3" y1="0" x2="3" y2="100"/>
+                            </g>
+                        </svg>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5 100" xml:space="preserve">
+                            <g>
+                                <line x1="3" y1="0" x2="3" y2="100"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 style="text-align: center;">Заказ проекта</h3>
+                    <form id="form1" class="ajax-form alt">
+                        <input type="text" class="name" name="name" placeholder="Ваше имя*" required="">
+                        <input type="tel" class="tel" name="tel" placeholder="Номер телефона*" required="">
+                        <hr>
+                        <button type="submit" class="button special" style="align-self: center;">
+                            <span>Отправить</span>
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 174" xml:space="preserve">
+                                <g id="LINE">
+                                    <line class="st0" x1="0.5" y1="86.9" x2="50.5" y2="0.3"/>
+                                </g>
+                                <g id="LINE_1_">
+                                    <line class="st1" x1="0.5" y1="86.9" x2="50.5" y2="173.5"/>
+                                </g>
+                            </svg>
+                        </button>
+                        <hr>
+                    </form>
                 </div>
-                <h3>Маленькие домики</h3>
-                <p>Маленькие домики сидят на грядке, потому что лучше мы ничего не придумали. Обычно мы стараемся сделать красиво, но тут нам было до пизды.</p>
+                <div id="popup2" class="popup_overlay fixed hide">
+                    <div class="popup_close" data-popup="popup2">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5 100" xml:space="preserve">
+                            <g>
+                                <line x1="3" y1="0" x2="3" y2="100"/>
+                            </g>
+                        </svg>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5 100" xml:space="preserve">
+                            <g>
+                                <line x1="3" y1="0" x2="3" y2="100"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 style="text-align: center;">Вопрос по проекту</h3>
+                    <form id="form1" class="ajax-form alt">
+                        <input type="text" class="name" name="name" placeholder="Ваше имя*" required="">
+                        <input type="tel" class="tel" name="tel" placeholder="Номер телефона*" required="">
+                        <input type="email" class="email" name="email" placeholder="E-mail*" required="">
+                        <textarea rows="5" name="message" class="message" placeholder="Ваше сообщение"></textarea>
+                        <hr>
+                        <button type="submit" class="button special" style="align-self: center;">
+                            <span>Отправить</span>
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 51 174" xml:space="preserve">
+                                <g id="LINE">
+                                    <line class="st0" x1="0.5" y1="86.9" x2="50.5" y2="0.3"/>
+                                </g>
+                                <g id="LINE_1_">
+                                    <line class="st1" x1="0.5" y1="86.9" x2="50.5" y2="173.5"/>
+                                </g>
+                            </svg>
+                        </button>
+                        <hr>
+                    </form>
+                </div>
             </div>
         </main>
         {% include footer.html %}
