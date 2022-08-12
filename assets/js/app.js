@@ -102,7 +102,7 @@
         }
     });
 
-    // Popups
+    // Popups open
     const areaAll = document.querySelectorAll('.area');
     for (const area of areaAll) {
         area.addEventListener('click', function(e){
@@ -114,23 +114,24 @@
                 popupEl.classList.remove("hide");
                 popupEl.classList.add("fade-in");
             }
-            const globalOverlayEl = document.querySelector('.global_overlay');
-            if (globalOverlayEl) {
-                globalOverlayEl.classList.remove('hide');
-                globalOverlayEl.classList.add('fade-in');
+            const overlay_id = this.dataset.overlay;
+            const overlayEl = document.getElementById(overlay_id);
+            if (overlayEl) {
+                overlayEl.classList.remove("hide");
+                overlayEl.classList.add("fade-in");
             }
         })
     }
 
+    // Popups close
     const popupCloseAll = document.querySelectorAll('.popup_close');
     for (const popupClose of popupCloseAll) {
         popupClose.addEventListener('click', function(e){
             e.preventDefault();
             e.stopPropagation();
-            // const popup_id = this.dataset.popup;
-            // const popupEl = document.getElementById(popup_id);
-            const popupElAll = document.querySelectorAll('.popup_overlay');
-            for (const popupEl of popupElAll) {
+            const popup_id = this.dataset.popup;
+            const popupEl = document.getElementById(popup_id);
+            if (popupEl) {
                 popupEl.classList.remove("fade-in");
                 popupEl.classList.add("fade-out");
                 window.setTimeout(function() {
@@ -138,8 +139,8 @@
                     popupEl.classList.remove("fade-out");
                 }, 450, popupEl);
             }
-            const globalOverlayEl = document.querySelector('.global_overlay');
-            if (globalOverlayEl) {
+            const globalOverlayAll = document.querySelectorAll('.global_overlay');
+            for (const globalOverlayEl of globalOverlayAll){
                 globalOverlayEl.classList.remove("fade-in");
                 globalOverlayEl.classList.add("fade-out");
                 window.setTimeout(function() {
@@ -147,23 +148,6 @@
                     globalOverlayEl.classList.remove("fade-out");
                 }, 450, globalOverlayEl);
             }
-            // if (popupEl) {
-            //     popupEl.classList.remove("fade-in");
-            //     popupEl.classList.add("fade-out");
-            //     const globalOverlayEl = document.querySelector('.global_overlay');
-            //     if (globalOverlayEl) {
-            //         globalOverlayEl.classList.remove("fade-in");
-            //         globalOverlayEl.classList.add("fade-out");
-            //     }
-            //     window.setTimeout(function() {
-            //         popupEl.classList.add("hide");
-            //         popupEl.classList.remove("fade-out");
-            //         if (globalOverlayEl) {
-            //             globalOverlayEl.classList.add("hide");
-            //             globalOverlayEl.classList.remove("fade-out");
-            //         }
-            //     }, 450, popupEl);
-            // }
         })
     }
 
