@@ -129,6 +129,11 @@ p {
     max-width: 55em;
 }
 
+p.asterisk {
+    font-size: 0.9em;
+    color: var(--mid-color);
+}
+
 sup {
     font-size: .7em;
     position: relative;
@@ -434,6 +439,23 @@ main {
     grid-template-columns: repeat(auto-fill, minmax(min(23.5em, 100%), 1fr));
     gap: 0 3rem;
 }
+
+    .two-columns > div:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .two-columns > div:last-child > div:last-child{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-end;
+    }
+
+    .two-columns > div:first-child > table {
+        margin: 0;
+    }
 
 .image {
     display: block;
