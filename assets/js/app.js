@@ -127,7 +127,8 @@
     const popupCloseAll = document.querySelectorAll('.popup_close');
     for (const popupClose of popupCloseAll) {
         popupClose.addEventListener('click', function(e){
-            if (e.target == this) {
+            const parent = e.target.parentNode;
+            if ((e.target == this) || ((parent == this) & !(parent.classList.contains('global_overlay')))) {
                 e.preventDefault();
                 e.stopPropagation();
                 const popup_id = this.dataset.popup;
