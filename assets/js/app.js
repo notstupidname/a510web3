@@ -127,26 +127,28 @@
     const popupCloseAll = document.querySelectorAll('.popup_close');
     for (const popupClose of popupCloseAll) {
         popupClose.addEventListener('click', function(e){
-            e.preventDefault();
-            e.stopPropagation();
-            const popup_id = this.dataset.popup;
-            const popupEl = document.getElementById(popup_id);
-            if (popupEl) {
-                popupEl.classList.remove("fade-in");
-                popupEl.classList.add("fade-out");
-                window.setTimeout(function() {
-                    popupEl.classList.add("hide");
-                    popupEl.classList.remove("fade-out");
-                }, 450, popupEl);
-            }
-            const globalOverlayAll = document.querySelectorAll('.global_overlay');
-            for (const globalOverlayEl of globalOverlayAll){
-                globalOverlayEl.classList.remove("fade-in");
-                globalOverlayEl.classList.add("fade-out");
-                window.setTimeout(function() {
-                    globalOverlayEl.classList.add("hide");
-                    globalOverlayEl.classList.remove("fade-out");
-                }, 450, globalOverlayEl);
+            if (e.target == this) {
+                e.preventDefault();
+                e.stopPropagation();
+                const popup_id = this.dataset.popup;
+                const popupEl = document.getElementById(popup_id);
+                if (popupEl) {
+                    popupEl.classList.remove("fade-in");
+                    popupEl.classList.add("fade-out");
+                    window.setTimeout(function() {
+                        popupEl.classList.add("hide");
+                        popupEl.classList.remove("fade-out");
+                    }, 450, popupEl);
+                }
+                const globalOverlayAll = document.querySelectorAll('.global_overlay');
+                for (const globalOverlayEl of globalOverlayAll){
+                    globalOverlayEl.classList.remove("fade-in");
+                    globalOverlayEl.classList.add("fade-out");
+                    window.setTimeout(function() {
+                        globalOverlayEl.classList.add("hide");
+                        globalOverlayEl.classList.remove("fade-out");
+                    }, 450, globalOverlayEl);
+                }
             }
         })
     }
