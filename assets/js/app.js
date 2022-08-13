@@ -14,7 +14,7 @@
         body.classList.add('transition');
         window.setTimeout(function() {
             window.location.href = href;
-        }, 150);
+        }, 50);
     }
     
     body.addEventListener('click', function(e) {
