@@ -126,33 +126,30 @@
     const popupCloseAll = document.querySelectorAll('.popup_close');
     for (const popupClose of popupCloseAll) {
         popupClose.addEventListener('click', function(e){
-
-                e.preventDefault();
-                e.stopPropagation();
-                const popup_id_string = this.dataset.popup;
-                const popup_id_array = popup_id_string.split(' ');
-                for (const popup_id of popup_id_array) {
-                    const popupEl = document.getElementById(popup_id);
-                    if (popupEl) {
-                        popupEl.classList.remove("fade-in");
-                        popupEl.classList.add("fade-out");
-                        window.setTimeout(function() {
-                            popupEl.classList.add("hide");
-                            popupEl.classList.remove("fade-out");
-                        }, 450, popupEl);
-                    }
-                }
-
-                const overlayEl = document.querySelector('.global_overlay');
-                if (overlayEl) {
-                    overlayEl.classList.remove("fade-in");
-                    overlayEl.classList.add("fade-out");
+            e.preventDefault();
+            e.stopPropagation();
+            const popup_id_string = this.dataset.popup;
+            const popup_id_array = popup_id_string.split(' ');
+            for (const popup_id of popup_id_array) {
+                const popupEl = document.getElementById(popup_id);
+                if (popupEl) {
+                    popupEl.classList.remove("fade-in");
+                    popupEl.classList.add("fade-out");
                     window.setTimeout(function() {
-                        overlayEl.classList.add("hide");
-                        overlayEl.classList.remove("fade-out");
-                    }, 450, overlayEl);
+                        popupEl.classList.add("hide");
+                        popupEl.classList.remove("fade-out");
+                    }, 450, popupEl);
                 }
-
+            }
+            const overlayEl = document.querySelector('.global_overlay');
+            if (overlayEl) {
+                overlayEl.classList.remove("fade-in");
+                overlayEl.classList.add("fade-out");
+                window.setTimeout(function() {
+                    overlayEl.classList.add("hide");
+                    overlayEl.classList.remove("fade-out");
+                }, 450, overlayEl);
+            }
         })
     }
 
