@@ -114,8 +114,7 @@
                 popupEl.classList.remove("hide");
                 popupEl.classList.add("fade-in");
             }
-            const overlay_id = this.dataset.overlay;
-            const overlayEl = document.getElementById(overlay_id);
+            const overlayEl = document.querySelector('.global_overlay');
             if (overlayEl) {
                 overlayEl.classList.remove("hide");
                 overlayEl.classList.add("fade-in");
@@ -127,30 +126,33 @@
     const popupCloseAll = document.querySelectorAll('.popup_close');
     for (const popupClose of popupCloseAll) {
         popupClose.addEventListener('click', function(e){
-            const parent = e.target.parentNode;
-            if ((e.target == this) || ((parent == this) & !(parent.classList.contains('global_overlay')))) {
+
                 e.preventDefault();
                 e.stopPropagation();
-                const popup_id = this.dataset.popup;
-                const popupEl = document.getElementById(popup_id);
-                if (popupEl) {
-                    popupEl.classList.remove("fade-in");
-                    popupEl.classList.add("fade-out");
-                    window.setTimeout(function() {
-                        popupEl.classList.add("hide");
-                        popupEl.classList.remove("fade-out");
-                    }, 450, popupEl);
+                const popup_id_string = this.dataset.popup;
+                const popup_id_array = popup_id_string.split(' ');
+                for (const popup_id of popup_id_array) {
+                    const popupEl = document.getElementById(popup_id);
+                    if (popupEl) {
+                        popupEl.classList.remove("fade-in");
+                        popupEl.classList.add("fade-out");
+                        window.setTimeout(function() {
+                            popupEl.classList.add("hide");
+                            popupEl.classList.remove("fade-out");
+                        }, 450, popupEl);
+                    }
                 }
-                const globalOverlayAll = document.querySelectorAll('.global_overlay');
-                for (const globalOverlayEl of globalOverlayAll){
-                    globalOverlayEl.classList.remove("fade-in");
-                    globalOverlayEl.classList.add("fade-out");
+
+                const overlayEl = document.querySelector('.global_overlay');
+                if (overlayEl) {
+                    overlayEl.classList.remove("fade-in");
+                    overlayEl.classList.add("fade-out");
                     window.setTimeout(function() {
-                        globalOverlayEl.classList.add("hide");
-                        globalOverlayEl.classList.remove("fade-out");
-                    }, 450, globalOverlayEl);
+                        overlayEl.classList.add("hide");
+                        overlayEl.classList.remove("fade-out");
+                    }, 450, overlayEl);
                 }
-            }
+
         })
     }
 
