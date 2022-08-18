@@ -3,34 +3,12 @@ p:first-child {
 }
 
 p + h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
 }
 
 ul {
     list-style: disc;
     margin:0 0 1rem 2rem;
-}
-
-.container {
-    width: clamp(200px, 100%, 50rem);
-}
-
-@media screen and (max-width: 800px) {
-
-    .container {
-        padding: 0 2rem;
-        width: calc(100% - 4rem);
-    }
-
-}
-
-@media screen and (max-width: 550px) {
-
-    .container{
-        padding: 0 1rem;
-        width: calc(100% - 2rem);
-    }
-
 }
 
 @media print {
@@ -49,6 +27,17 @@ ul {
         font-size: 14px;
     }
 
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
     /* hr {
         page-break-after: always;
     } */
