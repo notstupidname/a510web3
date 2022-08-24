@@ -538,6 +538,7 @@ main > div:first-child > img {
     stroke:var(--text-color);
     --dxf-small-font: 2000%;
     --dxf-big-font: 2500%;
+    font-family: 'Oswald', sans-serif;
 }
 
 .worklist {
