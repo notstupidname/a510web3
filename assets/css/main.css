@@ -449,7 +449,7 @@ ul.breadcrumbs {
     }
 
 #footer {
-    padding: 2rem 4rem;
+    padding: 4rem 4rem 2rem;
     opacity: 0.5;
     font-size: 80%;
     text-align: right;
@@ -836,10 +836,6 @@ main > div:first-child > img {
         padding: 2rem;
     }
 
-    #footer {
-        padding: 2rem;
-    }
-
     main {
         margin: 0;
     }
@@ -886,7 +882,7 @@ main > div:first-child > img {
         }
     
     #footer {
-        padding: 2rem 1rem;
+        padding: 4rem 1rem 2rem;
     }
 
     .container{
