@@ -400,16 +400,26 @@ ul.breadcrumbs {
         font-family: 'Oswald', 'Open Sans', sans-serif;
     }
 
-    #header a.logo #LWPOLYLINE {
+    #header a.logo svg g {
         fill: var(--text-color);
         stroke: var(--text-color);
         transition: all .3s;
     }
     
-        #header a.logo:hover #LWPOLYLINE {
-            /* fill: var(--back-color);
-            stroke: var(--back-color); */
-            opacity: 0.5;
+        #header a[data-counter="1"].logo:hover #LWPOLYLINE {
+            transform: translateX(53%);
+        }
+
+        #header a[data-counter="-1"].logo:hover #LWPOLYLINE {
+            transform: translateY(53%);
+        }
+
+        #header a[data-counter="1"].logo:hover #LWPOLYLINE-2 {
+            transform: translateX(-53%);
+        }
+
+        #header a[data-counter="-1"].logo:hover #LWPOLYLINE-3 {
+            transform: translateY(-53%);
         }
 
         #header a:not(:first-child) {
@@ -692,6 +702,8 @@ main > div:first-child > img {
     cursor: pointer;
     transition: all .3s;
     -webkit-tap-highlight-color: transparent;
+    stroke: #fff;
+    mix-blend-mode: difference;
 }
 
     .arrow.back {
