@@ -405,20 +405,28 @@ ul.breadcrumbs {
         transition: all .3s;
     }
     
-        #header a[data-counter="1"].logo:hover #LWPOLYLINE {
+        #header a[data-counter="0"].logo:hover #LWPOLYLINE {
             transform: translateX(53%);
         }
 
-        #header a[data-counter="-1"].logo:hover #LWPOLYLINE {
+        #header a[data-counter="1"].logo:hover #LWPOLYLINE {
             transform: translateY(53%);
         }
 
-        #header a[data-counter="1"].logo:hover #LWPOLYLINE-2 {
+        #header a[data-counter="2"].logo:hover #LWPOLYLINE {
+            transform: translate(53%, 53%);
+        }
+
+        #header a[data-counter="0"].logo:hover #LWPOLYLINE-2 {
             transform: translateX(-53%);
         }
 
-        #header a[data-counter="-1"].logo:hover #LWPOLYLINE-3 {
+        #header a[data-counter="1"].logo:hover #LWPOLYLINE-3 {
             transform: translateY(-53%);
+        }
+
+        #header a[data-counter="2"].logo:hover #LWPOLYLINE-4 {
+            transform: translate(-53%, -53%);
         }
 
         #header a:not(:first-child) {
