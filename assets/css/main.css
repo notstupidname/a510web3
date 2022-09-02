@@ -195,7 +195,7 @@ a, .button {
     background-repeat: no-repeat;
 }
 
-    a:hover, .button:hover {
+    a:not(.logo):hover, .button:hover {
         opacity: 0.85;
         background-position: 100% 100%;
     }
