@@ -405,29 +405,47 @@ ul.breadcrumbs {
         transition: all .3s;
     }
     
-        #header a[data-counter="0"].logo:hover #LWPOLYLINE {
+        #header a[data-counter="0"].logo:hover #sh-1 {
             transform: translateX(53%);
         }
 
-        #header a[data-counter="1"].logo:hover #LWPOLYLINE {
+        #header a[data-counter="1"].logo:hover #sh-1 {
             transform: translateY(53%);
         }
 
-        #header a[data-counter="2"].logo:hover #LWPOLYLINE {
+        #header a[data-counter="2"].logo:hover #sh-1 {
             transform: translate(53%, 53%);
         }
 
-        #header a[data-counter="0"].logo:hover #LWPOLYLINE-2 {
+        #header a[data-counter="0"].logo:hover #sh-2 {
             transform: translateX(-53%);
         }
 
-        #header a[data-counter="1"].logo:hover #LWPOLYLINE-3 {
+        #header a[data-counter="1"].logo:hover #sh-3 {
             transform: translateY(-53%);
         }
 
-        #header a[data-counter="2"].logo:hover #LWPOLYLINE-4 {
+        #header a[data-counter="2"].logo:hover #sh-4 {
             transform: translate(-53%, -53%);
         }
+
+        /* Piska */
+            #header a[data-counter="3"].logo:hover #sh-1 {
+                transform: translate(27.6%, -8%);
+            }
+
+            #header a[data-counter="3"].logo:hover #sh-2 {
+                transform-origin: center;
+                transform: translate(26%, -27%) rotate(180deg);
+            }
+
+            #header a[data-counter="3"].logo:hover #sh-3 {
+                transform: translateX(6.4%);
+            }
+
+            #header a[data-counter="3"].logo:hover #sh-4 {
+                transform: translateX(-6.4%);
+            }
 
         #header a:not(:first-child) {
             margin: 0 0.5em;
