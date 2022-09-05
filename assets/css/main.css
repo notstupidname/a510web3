@@ -403,6 +403,7 @@ ul.breadcrumbs {
         fill: var(--text-color);
         stroke: var(--text-color);
         transition: all .3s;
+        transform-origin: center;
     }
     
         #header a[data-counter="0"].logo:hover #sh-1 {
@@ -435,7 +436,6 @@ ul.breadcrumbs {
             }
 
             #header a[data-counter="3"].logo:hover #sh-2 {
-                transform-origin: center;
                 transform: translate(26%, -27%) rotate(180deg);
             }
 
@@ -445,6 +445,23 @@ ul.breadcrumbs {
 
             #header a[data-counter="3"].logo:hover #sh-4 {
                 transform: translateX(-6.4%);
+            }
+
+        /* Piska 2 */
+            #header a[data-counter="4"].logo:hover #sh-1 {
+                transform: translate(27.6%, -8%);
+            }
+
+            #header a[data-counter="4"].logo:hover #sh-2 {
+                transform: translate(-26.5%,14%);
+            }
+
+            #header a[data-counter="4"].logo:hover #sh-3 {
+                transform: rotate(-90deg) translate(0, -50%);
+            }
+
+            #header a[data-counter="4"].logo:hover #sh-4 {
+                transform: rotate(90deg) translate(2%, -50%);
             }
 
         #header a:not(:first-child) {
