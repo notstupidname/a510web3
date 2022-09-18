@@ -612,6 +612,25 @@ main > div:first-child > img {
     font-family: 'Oswald', sans-serif;
 }
 
+    .svg-drawing.hidden {
+        stroke-dasharray: 100000;
+        stroke-dashoffset: 100000;
+        transition: all 2s 1s ease-in;
+    }
+
+        .svg-drawing.hidden text {
+            opacity: 0;
+            transition: opacity 2s 1s ease-in;
+        }
+
+    .svg-drawing.hidden.show {
+        stroke-dashoffset: 0;
+    }
+
+        .svg-drawing.hidden.show text {
+            opacity: 1;
+        }
+
 .worklist {
     display: flex;
     gap: 0.5rem 1rem;

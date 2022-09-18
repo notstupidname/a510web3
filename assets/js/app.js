@@ -153,4 +153,16 @@
         })
     }
 
+    // Drawing animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    });
+
+    const hiddenDrawings = document.querySelectorAll('.svg-drawing.hidden');
+    hiddenDrawings.forEach((el) => observer.observe(el));
+
 })();
