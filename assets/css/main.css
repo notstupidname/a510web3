@@ -42,7 +42,7 @@ body:after {
     color: var(--text-color);
     fill: var(--text-color);
     stroke: var(--text-color);
-    --column-width: 55rem;
+    --column-width: 50rem;
 }
 
 ::selection {
@@ -58,7 +58,6 @@ body:after {
 
 html {
     scroll-behavior: smooth;
-    font-size: 18px;
     scrollbar-width: thin;
     scrollbar-gutter: stable;
     scrollbar-color: var(--text-color) var(--back-color);
@@ -110,7 +109,6 @@ button {
 
     html, body {
         min-width: 320px;
-        font-size: 16px;
     }
 
 }
@@ -128,8 +126,7 @@ body {
 /* Type */
 
 body, input, select, textarea {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6em;
+    line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
